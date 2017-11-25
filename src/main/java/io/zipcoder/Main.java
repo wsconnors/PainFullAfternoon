@@ -2,8 +2,6 @@ package io.zipcoder;
 
 import org.apache.commons.io.IOUtils;
 
-import java.util.ArrayList;
-
 
 public class Main {
 
@@ -15,19 +13,15 @@ public class Main {
 
     public static void main(String[] args) throws Exception{
         String output = (new Main()).readRawDataToString();
-        System.out.println(output);
+//        System.out.println(output);
 
-        MyItemParser differentParser = new MyItemParser();
-        differentParser.parse(output);
+        new ItemParser(output).showAll();
 
-        System.out.println(differentParser);
 
-//        ItemParser itemParser = new ItemParser();
-//        ArrayList<String> outputSeparated = itemParser.parseRawDataIntoStringArray(output);
+//        MyItemParser differentParser = new MyItemParser();
+//        differentParser.parse(output);
 //
-//        for(String itemString: outputSeparated){
-//            System.out.println(itemString);
-//        }
-        // TODO: parse the data in output into items, and display to console.
+//        System.out.println(differentParser);
+
     }
 }
